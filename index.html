@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendations</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="backButtonDiv" title="Back">
+                <img data-src="img/arrow-left-fill-large-angled-sm.svg" id="back-button" alt="Back Button" title="Back" class="iconic iconic-md" />
+            </div>
+            <input type="text" id="search-input" placeholder="search" />
+            <div class="searchButtonDiv" title="Search">
+                <img data-src="img/magnifying-glass.svg" id="search-button" alt="Search" title="Search" class="iconic iconic-md" />
+            </div>
+            <div class="preferencesDiv" title="Preferences">
+                <img data-src=img/settings-lg.svg id="preferences-button" alt="preferences" title="preferences" class="iconic iconic-md" />
+            </div>
+        </header>
+
+        <div class="" id="initial-page">
+            <section class="title"><h1 id="modeRecommendations">
+                Movie Recommendations
+            </h1></section>
+            <section class="content"></section>
+        </div>
+
+        <div class="page" id="search-results">
+            <section class="title"></section>
+            <section class="content flex-container"></section>
+        </div>
+
+        <div class="page" id="recommend-results">
+            <section class="title"></section>
+            <section class="content flex-container"></section>
+        </div>
+
+
+        <div class="overlay hide">&nbsp;</div>
+        <div class="modal off">
+            <div class="modal-header">
+                <h2>Preferences</h2>
+            </div>
+            <div class="modal-radio">
+                <input type="radio" name="video" value="movie" id="movie" checked>
+                <label id="firstLabel">Movie</label>
+
+                <input type="radio" name="video" value="tv" id="tv">
+                <label id="secondLabel">TV Series</label>
+            </div>
+            <button class="cancelButton">Cancel</button>
+            <button class="saveButton">Save</button>
+
+        </div>
+    </main>
+
+
+
+    <div class="attribution">
+        <a href="https://www.themoviedb.org"><img src="img/attribution-logo.svg" alt="TMDB logo" /></a>
+    </div>
+    <footer>
+        <p>&copy; 2018 Justin Rignault </p>
+    </footer>
+
+    <script src="js/iconic.min.js"></script>
+    <script src="js/key.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

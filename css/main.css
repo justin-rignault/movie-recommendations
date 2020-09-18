@@ -1,0 +1,346 @@
+/***************************************************************************
+Filename: main.css
+Author: Justin Rignault
+Description: main css file linked to index.html for api project
+Date: Nov 12 2018
+***************************************************************************/
+@import url("https://fonts.googleapis.com/css?family=Lato|Merriweather");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: lato, helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid black;
+    background-color: rgb(1,210, 119);
+}
+
+.page {
+    display: none;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: merriweather, georgia, serif;
+}
+
+/**********************************************************
+                    IMAGES
+**********************************************************/
+
+.attribution {
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+}
+
+.searchButtonDiv,
+.backButtonDiv,
+.preferencesDiv {
+    display: inline;
+}
+
+.searchButtonDiv,
+.backButtonDiv,
+.preferencesDiv:hover {
+    cursor: pointer;
+}
+
+#search-button {
+    width: 18px;
+    transform: translateY(11px) translateX(-40px);
+}
+
+.iconic-property-stroke,
+.iconic-property-fill {
+    fill: hsl(300deg 20% 20%);
+    stroke: hsl(300deg 10% 50%);
+}
+
+#preferences-button {
+    width: 20px;
+    height: auto;
+    transform: translate(-20px, 5px)
+}
+
+#back-button {
+    transform: translateY(3px);
+}
+
+/**********************************************************
+                    MODAL WINDOW
+**********************************************************/
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    width: 50%;
+    height: 35%;
+    z-index: 101;
+    top: calc((100% - 35%)/2);
+    left: calc((100% - 50%)/2);
+    border: 3px solid rgb(100, 149, 237);
+    text-align: center;
+    background-color: white
+}
+
+input[type=radio] {
+    transform: scale(1.5);
+    transition: transform 0.1s linear;
+}
+
+input[type=radio]:hover {
+    transform: scale(2);
+}
+
+.off {
+    transform: translateY(500%);
+}
+
+.on {
+    transform: translateY(0);
+    transition: all 0.6s ease-in;
+}
+
+.cancelButton,
+.saveButton {
+    width: 40%;
+    position: absolute;
+    border: none;
+    background-color: rgb(50, 205, 50);
+    color: white;
+    padding: 0.5rem 2rem;
+
+}
+
+.saveButton {
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.cancelButton {
+    bottom: 1rem;
+    left: 1rem;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 10px;
+}
+
+.modal-radio {
+    line-height: 3;
+}
+
+label {
+    padding: 2%;
+}
+
+#firstLabel {
+    margin-right: 5%;
+    ;
+}
+
+#tv {
+    margin-left: 20px;
+}
+
+/**********************************************************
+                    CARDS
+**********************************************************/
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movieCard {
+    width: 100%;
+    height: auto;
+    margin: 1% 3%;
+    background-color: rgb(100, 149, 237);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s linear;
+    text-align: center;
+    box-shadow: 5px 6px 10px rgb(100, 100, 100);
+    border: 1px solid black;
+}
+
+.movieCard:hover {
+    transform: scale(1.05);
+}
+
+.imageSection {
+    float: left;
+    width: 12rem;
+    height: 17rem;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+
+.imageSection > img {
+    height: 17rem;
+    margin-right: 1rem;
+}
+section.content{
+    background: rgb(230,230,230);
+    margin: 2%;
+}
+
+/**********************************************************
+                    CARDS END
+**********************************************************/
+.title > h3 {
+    text-align: center;
+    margin: 2% 2% 1%;
+    text-shadow: 3px 2px 5px rgba(28, 110, 164, 0.55);
+}
+
+.title > h5 {
+    text-align: center;
+    margin: 0% 2% 1%;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#modeRecommendations {
+    margin-top: 4%;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 0px 3px 0px rgba(1, 170, 109, 0.7),
+        0px 14px 10px rgba(0, 0, 0, 0.15),
+        0px 14px 2px rgba(0, 0, 0, 0.1),
+        0px 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+#search-input {
+    width: 60%;
+    margin: 3% 1%;
+    padding: 1%;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+#search-input::placeholder {
+    text-align: center;
+    color: rgb(0, 130, 0);
+    font-weight: normal;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+footer {
+    margin-top: 5%;
+    text-align: center;
+}
+
+/**********************************************************
+                    MEDIA QUERIES
+**********************************************************/
+@media(max-width: 500px) {
+    #modeRecommendations {
+        font-size: 2rem;
+    }
+
+    .modal-radio {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10%;
+    }
+
+    #movie {
+        width: 15%;
+        margin: 10% 0% 0% 20%;
+    }
+
+    #firstLabel {
+        margin: 0;
+        width: 65%;
+    }
+
+    #tv {
+        margin: 0;
+        width: 15%;
+        margin: 10% 0% 0% 20%;
+    }
+
+    #secondLabel {
+        width: 65%;
+    }
+
+
+    .cancelButton,
+    .saveButton {
+        padding: none;
+        margin: none;
+        text-align: center;
+
+    }
+
+    .modal {
+        width: 50%;
+        height: 40%;
+        top: calc((100% - 40%)/2);
+        left: calc((100% - 50%)/2);
+        border: 3px solid rgb(100, 149, 237);
+    }
+
+}
+
+@media (min-width: 940px) {
+    #search-input {
+        margin: 28px 10px;
+        padding: 9px
+    }
+}
+
+@media (min-width: 1200px) {
+    .movieCard {
+        width: 43%;
+    }
+}
+
+@media(max-height: 500px) {
+    .modal {
+        height: 60%;
+        top: calc((100% - 60%)/2);
+    }
+    .modal-radio{
+        margin-top: 0;
+    }
+}
